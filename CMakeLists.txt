@@ -1,0 +1,6 @@
+﻿cmake_minimum_required (VERSION 3.8)
+project ("2023-07-23_TASK11_HW05_dyn_lib_cmake")
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library (FiguresDynamicLibrary SHARED figure.cpp triangle.cpp quadrangle.cpp e_triangle.cpp i_triangle.cpp r_triangle.cpp rectangle.cpp parallelogram.cpp rhomb.cpp square.cpp)
+add_executable (FiguresExe main.cpp funcs.cpp)
+target_link_libraries(FiguresExe FiguresDynamicLibrary)
